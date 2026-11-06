@@ -1,0 +1,41 @@
+sniffer:
+  enable: true
+  override-destination: true
+  sniff:
+    TLS:
+      ports:
+        - 443
+        - 8443
+    HTTP:
+      ports:
+        - 80
+        - 8080
+    DNS:
+      ports: [ 53 ]
+      override-destination: false
+
+proxies:
+  - name: dibao
+    type: socks5
+    server: 'proxy.example.com'
+    port: '62001'
+    username: 'your-proxy-username'
+    password: 'your-proxy-password'
+
+dns:
+  enable: true
+  ipv6: false
+  respect-rules: true
+  default-nameserver:
+  - 1.1.1.1
+  nameserver:
+  - https://dns.google/dns-query
+  - https://cloudflare-dns.com/dns-query
+  - https://1.1.1.1/dns-query
+  - https://8.8.8.8/dns-query
+
+rules:
+  - AND,((DST-PORT,443),(NETWORK,udp)),REJECT
+  - NETWORK,udp,DIRECT
+  - DOMAIN-KEYWORD,push-rtmp,DIRECT
+  - MATCH,dibao

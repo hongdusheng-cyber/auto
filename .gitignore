@@ -1,0 +1,5 @@
+node_modules/
+.playwright-profile/
+.playwright-profiles/
+.playwright-auth-state.json*
+.control-panel/

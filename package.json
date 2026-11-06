@@ -1,0 +1,23 @@
+{
+  "name": "office-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Office automation workspace",
+  "type": "module",
+  "scripts": {
+    "ui": "node scripts/control-panel.mjs",
+    "add:user": "node scripts/add-user.mjs",
+    "add:account": "node scripts/add-account.mjs",
+    "network:acceleration": "node scripts/network-acceleration.mjs",
+    "rules:add": "node scripts/add-rules.mjs",
+    "rules:complete": "node scripts/complete-rules.mjs",
+    "contract:open": "node scripts/open-contract.mjs",
+    "sdwan:takeover": "node scripts/takeover-sdwan.mjs",
+    "device:upgrade": "node scripts/upgrade-device.mjs",
+    "device:warehouse-outbound": "node scripts/device-warehouse-outbound.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "playwright": "^1.62.1"
+  }
+}

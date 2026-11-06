@@ -1,3 +1,5 @@
+首次安装、登录与常见问题请先阅读 README.md。
+
 可视化控制台
 npm run ui
 打开 http://localhost:17321
@@ -28,7 +30,7 @@ Mac 快速启动
 npm run add:user -- --file examples/customer.txt
 
 添加账号
-在“客户开通”卡片下方填写公司、姓名、邮箱，点击“添加账号”。
+当前网页的“添加账号”区域处于隐藏状态，请使用下方 npm run add:account 命令。
 按公司完整名称进入该公司用户后台，再打开人事管理的用户列表并新建普通员工账号。
 姓名可填写“张三”“欧阳明”，或按“姓 名”用空格分开；工作 Email 和个人 Email 使用同一个输入邮箱。
 每次任务独立生成 10 位随机密码及正常格式的 11 位手机号，不发送短信。手机号重复时停止并在网页告警，不自动换号重试。
@@ -75,7 +77,7 @@ npm run rules:complete -- --company "公司名称" --rules '["Google","Google �
 也可用 --file examples/customer.txt 读取公司名称；加 --dry-run-parse 可仅检查参数。
 
 合约开通
-npm run contract:open -- --contract-id 8393 --ip 192.190.145.162:62001:pd713491:qm758570
+npm run contract:open -- --contract-id 12345 --ip "proxy.example.com:62001:your-proxy-username:your-proxy-password"
 
 接管 SD-WAN CPE
 npm run sdwan:takeover -- --company "公司名称" --device-name "设备名称" --device-mac "设备MAC"
